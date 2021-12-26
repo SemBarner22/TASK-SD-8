@@ -77,10 +77,10 @@ public class PatternTest {
     public void strangeTime() {
         for (int i = 0; i < 3; i++) {
             eventsStatistic.incEvent("event");
-            addSeconds(60 * 50);
+            addSeconds(60 * 40);
         }
         assertEquals(rpmOne, eventsStatistic.getEventStatisticByName("event"));
-        subtractSeconds(60 * 50);
+        subtractSeconds(60 * 40);
         assertEquals(rpmOne, eventsStatistic.getEventStatisticByName("event"));
     }
 
